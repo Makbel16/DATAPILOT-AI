@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #F3F5F4;
+    --surface: #FFFFFF;
+    --sidebar: #20201F;
+    --sidebar-surface: #2C2B2A;
+    --text-primary: #171918;
+    --text-secondary: #777D79;
+    --border: #E6E9E7;
+    --primary: #69E7B8;
+    --primary-hover: #45DDA8;
+    --primary-dark: #087A5C;
+    --background-dark: #071B16;
+    --success: #14996F;
+    --warning: #D99A32;
+    --danger: #D65F69;
+  }
+
+  * {
+    border-color: rgba(105, 231, 184, 0.12);
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+}
+
+/* Glassmorphism and Emerald Glow Utilities */
+.glass-panel {
+  background: rgba(15, 25, 22, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(105, 231, 184, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(230, 233, 231, 0.9);
+  box-shadow: 0 8px 32px 0 rgba(7, 27, 22, 0.06);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(20, 34, 29, 0.7) 0%, rgba(13, 22, 19, 0.85) 100%);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(105, 231, 184, 0.14);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(105, 231, 184, 0.35);
+  box-shadow: 0 8px 30px -4px rgba(105, 231, 184, 0.15);
+}
+
+.emerald-glow-box {
+  box-shadow: 0 0 50px -10px rgba(105, 231, 184, 0.35), inset 0 0 0 1px rgba(105, 231, 184, 0.3);
+}
+
+.emerald-glow-sm {
+  box-shadow: 0 0 20px -5px rgba(105, 231, 184, 0.4);
+}
+
+.emerald-badge {
+  background: rgba(105, 231, 184, 0.12);
+  border: 1px solid rgba(105, 231, 184, 0.3);
+  color: #69E7B8;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 20, 16, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(105, 231, 184, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(105, 231, 184, 0.45);
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.04);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}

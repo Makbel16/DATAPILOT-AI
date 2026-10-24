@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+backend/venv/
+backend/datapilot.db
+backend/uploads/*
+!backend/uploads/.gitkeep
+.pytest_cache/
+.coverage
+
+# Node & Vite
+node_modules/
+dist/
+dist-ssr/
+*.local
+frontend/node_modules/
+frontend/dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment & IDE
+.env
+.env.local
+.vscode/
+.idea/
+.DS_Store
+*.log
